@@ -15,7 +15,7 @@ Writing Test Week 4
 
 Jadi karena fetch() mengembalikan sebuah promise, kita meneruskan sebuah fungsi ke dalam metode then() dari promise yang dikembalikan. Metode ini akan dipanggil ketika permintaan HTTP telah mendapat respon dari server. Di handler, kami memeriksa apakah permintaan berhasil, dan melontarkan kesalahan jika tidak. Jika tidak, kami memanggil response.text(), untuk mendapatkan isi respons sebagai teks.
 
-Ternyata response.text() juga asinkron, jadi kita mengembalikan promise yang dikembalikannya, dan meneruskan fungsi ke dalam metode then() dari promise baru ini. Fungsi ini akan dipanggil ketika teks respons sudah siap, dan di dalamnya kita akan memperbarui blok <pre> kita dengan teks tersebut.
+Ternyata response.text() juga asinkron, jadi kita mengembalikan promise yang dikembalikannya, dan meneruskan fungsi ke dalam metode then() dari promise baru ini. Fungsi ini akan dipanggil ketika teks respons sudah siap, dan di dalamnya kita akan memperbarui blok kita dengan teks tersebut.
 
 Terakhir, kita merangkai catch() handler di bagian akhir, untuk menangkap kesalahan apa pun yang dilemparkan ke salah satu fungsi asinkron yang kita panggil atau handlernya.
 
